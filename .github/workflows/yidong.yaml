@@ -1,4 +1,4 @@
-name: WPS自动邀请
+name: 中国移动
 
 on:
   workflow_dispatch:
