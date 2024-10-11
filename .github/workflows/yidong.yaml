@@ -24,7 +24,7 @@ jobs:
         run: pip install -r ./requirements.txt
 
       - name: "运行 中国移动云盘"
-        run: python3 function/wps/wps_invitation.py
+        run: python3 function/wps/yidong.py
         env:
           ydypCK: ${{ secrets.ydypCK }}
           SEND_KEY: ${{ secrets.SEND_KEY }}
