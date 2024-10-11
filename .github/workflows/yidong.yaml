@@ -23,10 +23,10 @@ jobs:
       - name: "安装依赖包"
         run: pip install -r ./requirements.txt
 
-      - name: "运行 WPS自动邀请"
+      - name: "运行 中国移动云盘"
         run: python3 function/wps/wps_invitation.py
         env:
-          WPS_KEY: ${{ secrets.WPS_KEY }}
+          ydypCK: ${{ secrets.ydypCK }}
           SEND_KEY: ${{ secrets.SEND_KEY }}
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}
