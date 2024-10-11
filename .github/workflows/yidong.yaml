@@ -1,4 +1,4 @@
-name: 中国移动
+name: 中国移动云盘
 
 on:
   workflow_dispatch:
