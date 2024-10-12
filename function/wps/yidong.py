@@ -28,23 +28,23 @@ user_amount = ''  # 用户云朵·数量
 GLOBAL_DEBUG = False
 
 
-# 发送通知
 def load_send():
-    cur_path = path.abspath(path.dirname(__file__))
-    notify_file = cur_path + "/notify.py"
+    cur_path = path.abspath(path.dirname(__file__))  # 获取当前文件的目录
+    notify_file = path.join(cur_path, "notify.py")    # 构建完整路径
+
+    print(f"正在加载: {notify_file}")  # 打印路径，调试时查看路径是否正确
 
     if path.exists(notify_file):
         try:
-            from notify import send  # 导入模块的send为notify_send
+            from notify import send  # 尝试导入 notify.py 中的 send 方法
             print("加载通知服务成功！")
             return send  # 返回导入的函数
-        except ImportError:
-            print("加载通知服务失败~")
+        except ImportError as e:
+            print(f"加载通知服务失败: {e}")  # 打印详细的错误信息
     else:
-        print("加载通知服务失败~")
+        print("加载通知服务失败~，notify.py 文件不存在")
 
-    return False  # 返回False表示未成功加载通知服务
-
+    return False
 
 class YP:
     def __init__(self, cookie):
