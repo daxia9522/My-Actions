@@ -1,11 +1,11 @@
 import requests
 import time
-import hmac
-import hashlib
-import base64
+#import hmac
+#import hashlib
+#import base64
 import json
 import os
-import urllib.parse
+#import urllib.parse
 
 class sendNotify:
     # Server酱
