@@ -37,7 +37,6 @@ class sendNotify:
         msg = kwargs.get("msg", "")
         sendNotify.serverNotify(title, msg)
 
-# 如果你需要在本文件中直接测试：
-# if __name__ == "__main__":
-#     sendNotify.send(title='测试标题', msg='测试消息内容')
+# 暴露 send 方法
+send = sendNotify.send
 
