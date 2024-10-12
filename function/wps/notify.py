@@ -8,7 +8,6 @@ import os
 #import urllib.parse
 
 class sendNotify:
-    # Server酱
     SCKEY = os.environ.get('PUSH_KEY', '')
 
     @staticmethod
@@ -32,11 +31,8 @@ class sendNotify:
             print('\n您未提供Server酱的SCKEY，取消微信推送消息通知\n')
 
     @staticmethod
-    def send(**kwargs):
-        title = kwargs.get("title", "")
-        msg = kwargs.get("msg", "")
+    def send(title, msg):
         sendNotify.serverNotify(title, msg)
 
-# 暴露 send 方法
+# 暴露 send 函数
 send = sendNotify.send
-
